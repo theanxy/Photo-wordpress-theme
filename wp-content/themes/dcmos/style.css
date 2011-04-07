@@ -1,0 +1,15 @@
+/*
+ Theme Name: --------DEV--------- Digital CMO Summit
+ Author: XHTMLized (http://www.xhtmlized.com/)
+ Description: Wordpress theme for Digital CMO Summit
+ Version: 1.1
+ Date: February 2011
+ 
+ */
+
+
+
+@import url('css/main.css'); 
+
+html { margin-top: 0px !important; }
+* html body { margin-top: 0px !important; }

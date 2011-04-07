@@ -1,0 +1,147 @@
+/* Making layout adjustable to different viewports
+------------------------------------------------------------------------------*/
+
+h2 {
+	margin-bottom: 20px;
+}
+#header {
+	padding-left: 0;
+	padding-right: 0;
+}
+.homepage #header {
+	padding-bottom: 0;
+}
+.logo-compete-home {
+	margin-bottom: 10px;
+}
+#header h1 {
+	padding-top: 15px;
+	margin: 0px auto 40px;
+}
+#navigation {
+	font-size: 75%;
+}
+#navigation li {
+	float: none;
+	height: 30px;
+	padding-left: 14px;
+	background-position: 3px 5px;
+}
+#header #navigation li a {
+	display: inline;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+#header #navigation li.important a {
+	padding: 7px 9px;
+}
+
+#content {
+	padding: 20px 5% 30px 5%;
+}
+
+.homepage #top {
+	height: auto;
+	background-position: -600px 10px;
+}
+.homepage #top .vevent {
+	position: static;
+	-webkit-transform: scale(0.8);
+}
+.place-time {
+	margin: 2px 0 75px;
+}
+.homepage .register {
+	text-align: center;
+}
+#top .button-register {
+	margin: 0 auto;
+	font-size: 1.8em;
+}
+
+.homepage #content {
+	padding-top: 0;
+}
+.homepage .wide-sidebar section {
+	width: auto;
+	padding: 0 10px;
+}
+
+.narrow-sidebar section {
+	margin: 0;
+}
+
+.agenda .hours {
+	float: none;
+	font-weight: bold;
+}
+.agenda .desc {
+	margin-left: 30px;
+}
+.homepage #sidebar,
+.agenda #sidebar,
+.participants #sidebar {
+	display: none;
+}
+.speakers #sidebar {
+	width: auto;
+	float: none;
+	padding-left: 30px;
+}
+.speakers #sidebar h2 {
+	display: none;
+}
+.speakers .photos {
+	list-style: disc;
+}
+
+.photos img {
+	display: none;
+}
+.photos a {
+	display: inline;
+}
+
+.registration #sidebar {
+	display: none;
+}
+.registration .error {
+	background: none;
+	margin-bottom: 20px;
+	margin-left: 2px;
+	
+}
+.registration .error span {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding-left: 10px;
+}
+.registration #main {
+	margin: 0;
+}
+
+#footer {
+	padding: 0;
+}
+#footer .skip {
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	padding: 10px 0 0;
+	text-align: center;
+	color: #ccc;
+	font-weight: bold;
+	text-decoration: none;
+}
+.container #footer div {
+	float: none;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 10px 0 0;
+	width: 200px;
+}
+.container #footer .f-right {
+	width: 150px;
+}

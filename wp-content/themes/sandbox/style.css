@@ -1,0 +1,65 @@
+/*
+THEME NAME: Photo
+THEME URI: http://www.plaintxt.org/themes/sandbox/
+DESCRIPTION: Rich with powerful and dynamic semantic class selectors, Sandbox is a canvas for CSS artists
+AUTHOR: Wojtek Zajac
+AUTHOR URI:
+*/
+
+
+
+ul li {
+	margin: 0 0 30px;
+	list-style: none;
+}
+h1, h2 {
+	margin: 0;
+}
+
+div#container,div#primary {
+margin-top:2em;
+}
+
+
+header,div#footer {
+text-align:center;
+}
+
+
+#menu {
+background:#EEE;
+height:1.5em;
+margin:1em 0;
+width:100%;
+text-align: center;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+}
+#menu li {
+	float: none;
+	margin: 0;
+	display: inline;
+	padding: 0 20px;
+}
+
+
+.photos {
+	position: relative;
+}
+.js .photos article {
+	display: none;
+	width: 600px;
+	height: 600px;
+}
+.js .photos .active {
+	display: block;
+}
+
+#photos-nav {
+	position: absolute;
+	top: 200px;
+	left: 800px;
+}
