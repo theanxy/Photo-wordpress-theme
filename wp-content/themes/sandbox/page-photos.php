@@ -13,7 +13,11 @@ $currentID = get_the_ID();
 $url = $_SERVER["REQUEST_URI"];
 $urlPieces = explode("/", $url);
 $currentPhoto = $urlPieces[count($urlPieces)-2];
-echo $currentPhoto;
+$prev = $currentPhoto - 1;
+$next = $currentPhoto + 1;
+$URL = explode('/', $_SERVER['REQUEST_URI']);
+$pageURL = $URL[1];
+echo $prev;
 ?>
 
 			<!--<h2 class="entry-title"><?php the_title() ?></h2>-->
@@ -41,9 +45,9 @@ echo $currentPhoto;
 ?>
 </section>
 <nav id="photos-nav">
-	<a rel="prev">&lt;</a>
+	<a rel="prev"<?php if($currentPhoto > 1) echo ' href="/'.$pageURL.'/'.$prev.'/"'; ?>>&lt;</a>
 	<span><meter min="1" max="<?php echo count($images); ?>">1</meter> / <?php echo count($images); ?></span>
-	<a rel="next" href="2/">&gt;</a>
+	<a rel="next"<?php if($currentPhoto < count($images)) echo ' href="/'.$pageURL.'/'.$next.'/"'; ?>>&gt;</a>
 </nav>
 
 

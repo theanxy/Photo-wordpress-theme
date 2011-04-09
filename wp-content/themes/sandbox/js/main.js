@@ -45,7 +45,7 @@ var WZ = {
 				linkHref = link.attr('href').split("/");
 				linkHrefId = linkHref[linkHref.length-2];
 
-			console.log(linkHrefId);
+			console.log('linkHrefId '+linkHrefId);
 			WZ.swapPhoto(linkHrefId);
 			history.pushState(null, null, pathName+linkHrefId+'/');
 
@@ -85,8 +85,11 @@ var WZ = {
 			};
 	},
 	
-	swapPhoto : function(href) {
-		var newIndex = href.split("/").pop();
+	// swaps given photos
+	swapPhoto : function(destination) {
+		var newIndex = destination.split("/").pop();
+		
+		console.log();
 		
 		// making new photo active
 		$('.photos .active').fadeOut('fast', function() {
