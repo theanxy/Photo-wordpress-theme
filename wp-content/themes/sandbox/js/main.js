@@ -1,7 +1,7 @@
 var WZ = {
 	onReady : function() {
 		$('html').removeClass('no-js').addClass('js');
-
+		
 		WZ.hideImages();
 		
 		if(WZ.detectHistory()) {
@@ -24,8 +24,40 @@ var WZ = {
 		return !!(window.history && history.pushState);
 	},
 	setupHistory : function() {
-		WZ.addClicker($('#photos-nav a[rel=prev]'));
-		WZ.addClicker($('#photos-nav a[rel=next]'));
+		var pathName = location.pathname,
+			pathNameSliced = pathName.split('/');
+		
+		if(pathNameSliced.length > 3) {
+			var pathName = '/'+pathNameSliced[1]+'/',
+			 	singlePhoto = true;
+		};
+		
+		WZ.addClicker($('#photos-nav a[rel=prev]'), pathName, singlePhoto);
+		WZ.addClicker($('#photos-nav a[rel=next]'), pathName, singlePhoto);
+	},
+	
+	addClicker : function(link, pathName, singlePhoto) {
+		link.click(function(e) {
+			
+			var $this = $(this),
+				$counter = $('#photos-nav meter'),
+				change = $this.attr('rel') == 'next' ? 1 : -1,
+				linkHref = link.attr('href').split("/");
+				linkHrefId = linkHref[linkHref.length-2];
+
+			console.log(linkHrefId);
+			WZ.swapPhoto(linkHrefId);
+			history.pushState(null, null, pathName+linkHrefId+'/');
+
+			// changing photos index
+			var currentIndex = $counter.html(),
+			 	newIndex = eval(currentIndex) + change;
+
+			$counter.html(newIndex);
+			WZ.updatePhotoNav();
+			
+			e.preventDefault();
+		});
 	},
 	
 	// updating Photo Navigation after change
@@ -53,29 +85,6 @@ var WZ = {
 			};
 	},
 	
-	addClicker : function(link) {
-		link.click(function(e) {
-			
-			var $this = $(this),
-				$counter = $('#photos-nav meter'),
-				change = $this.attr('rel') == 'next' ? 1 : -1,
-				linkHref = link.attr('href').split("/");
-				linkHrefId = linkHref[linkHref.length-2];
-
-			console.log(linkHrefId);
-			WZ.swapPhoto(linkHrefId);
-			history.pushState(null, null, '/'+linkHrefId+'/');
-
-			// changing photos index
-			var currentIndex = $counter.html(),
-			 	newIndex = eval(currentIndex) + change;
-
-			$counter.html(newIndex);
-			WZ.updatePhotoNav();
-			
-			e.preventDefault();
-		});
-	},
 	swapPhoto : function(href) {
 		var newIndex = href.split("/").pop();
 		
