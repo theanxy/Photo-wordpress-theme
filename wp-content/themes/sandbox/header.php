@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
+	<meta charset="UTF-8">
 	<title><?php wp_title( '-', true, 'right' ); echo wp_specialchars( get_bloginfo('name'), 1 ) ?></title>
-	<meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url') ?>" />
+	
+	<meta name="description" content="Homepage of Wojtek Zając.">
+	<meta name="author" content="Wojtek Zając">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>" />
+	
+	<script src="js/libs/modernizr-1.7.min.js"></script>
 <?php //wp_head() // For plugins ?>
 </head>
 
