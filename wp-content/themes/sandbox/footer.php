@@ -1,5 +1,6 @@
-<br clear="all">
-FOOTER
+<footer>
+	<p>&copy; Wojtek Zając</p>
+</footer>
 
 </div>
 

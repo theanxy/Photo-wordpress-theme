@@ -8,7 +8,9 @@ var WZ = {
 			WZ.setupHistory();
 			
 			window.addEventListener("popstate", function(e) {
-				WZ.swapPhoto(location.pathname);
+				var linkHref = location.pathname.split("/"),
+					linkHrefId = linkHref[linkHref.length-2];
+				WZ.swapPhoto(linkHrefId);
 			}, false);
 		};
 	},
@@ -87,14 +89,14 @@ var WZ = {
 	
 	// swaps given photos
 	swapPhoto : function(destination) {
-		var newIndex = destination.split("/").pop();
-		
-		console.log();
+		console.log('destination: ' + destination);
+/*		var newIndex = destination.split("/").pop();
+		newIndex.length == 4 ? newIndex = newIndex[2] : console.log('bląd');*/
 		
 		// making new photo active
 		$('.photos .active').fadeOut('fast', function() {
 			$(this).removeClass('active');
-			$('.photos article').eq(newIndex-1).fadeIn('fast').addClass('active');
+			$('.photos article').eq(destination-1).fadeIn('fast').addClass('active');
 		});
 	}
 };

@@ -29,12 +29,17 @@ $pageURL = $URL[1];
 	$images =& get_children( 'post_type=attachment&post_mime_type=image&post_parent='.$currentID.'&orderby=menu_order&order=ASC' );
 	if (!empty($images)) :
 ?>
+<section class="bio">
+	<p>Hi!</p>
+	<p>I’m a web developer for XHTMLized.</p>
+	<p><a href="#">LinkedIn</a></p>
+</section>
 <section class="photos">
 <?php
 	$i = 0;
 	foreach( (array) $images as $attachment_id => $attachment ) : 
 	$i++;
-	$image_attributes = wp_get_attachment_image_src( $attachment_id, array(750,500) );
+	$image_attributes = wp_get_attachment_image_src( $attachment_id, array(760,506) );
 ?>
 <article<?php if($currentPhoto == $i) echo ' class="active"'; ?>>
 	<img src="<?php echo $image_attributes[0]?>" width="<?php echo $image_attributes[1] ?>" height="<?php echo $image_attributes[2] ?>" alt="" />
