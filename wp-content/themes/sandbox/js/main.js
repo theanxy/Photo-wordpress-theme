@@ -90,8 +90,6 @@ var WZ = {
 	// swaps given photos
 	swapPhoto : function(destination) {
 		console.log('destination: ' + destination);
-/*		var newIndex = destination.split("/").pop();
-		newIndex.length == 4 ? newIndex = newIndex[2] : console.log('bląd');*/
 		
 		// making new photo active
 		$('.photos .active').fadeOut('fast', function() {
