@@ -68,14 +68,18 @@ var WZ = {
 			$prevLink = $('#photos-nav a[rel=prev]'),
 			$nextLink = $('#photos-nav a[rel=next]'),
  			index = eval($counter.html()),
-		 	maxIndex = $counter.attr('max');
+		 	maxIndex = $counter.attr('max'),
+			oldPath = location.pathname.split("/"),
+			newPath = '/' + oldPath[1] + '/';
 
 			// setting previous photo link
 			if(index == 1) {
 				$prevLink.removeAttr('href');
+			} else if(index == 2) {
+				$prevLink.attr('href', newPath);
 			} else {
 				prevVal = index - 1;
-				$prevLink.attr('href', prevVal + '/');
+				$prevLink.attr('href', newPath + prevVal + '/');
 			};
 			
 			// setting next photo link
@@ -83,7 +87,7 @@ var WZ = {
 				$nextLink.removeAttr('href');
 			} else {
 				nextVal = index + 1;
-				$nextLink.attr('href', nextVal + '/');
+				$nextLink.attr('href', newPath + nextVal + '/');
 			};
 	},
 	
