@@ -11,7 +11,7 @@
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>" />
 	
-	<script src="js/libs/modernizr-1.7.min.js"></script>
+	<script src="<?php bloginfo('template_directory') ?>/js/modernizr-1.7.min.js"></script>
 <?php //wp_head() // For plugins ?>
 </head>
 

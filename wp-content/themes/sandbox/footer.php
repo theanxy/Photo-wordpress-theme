@@ -1,6 +1,6 @@
-<footer>
+<!--<footer>
 	<p>&copy; Wojtek Zając</p>
-</footer>
+</footer>-->
 
 </div>
 

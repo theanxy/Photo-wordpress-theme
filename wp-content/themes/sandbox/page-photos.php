@@ -29,11 +29,11 @@ $pageURL = $URL[1];
 	$images =& get_children( 'post_type=attachment&post_mime_type=image&post_parent='.$currentID.'&orderby=menu_order&order=ASC' );
 	if (!empty($images)) :
 ?>
-<section class="bio">
+<!--<section class="bio">
 	<p>Hi!</p>
 	<p>I’m a web developer for XHTMLized.</p>
 	<p><a href="#">LinkedIn</a></p>
-</section>
+</section>-->
 <section class="photos">
 <?php
 	$i = 0;

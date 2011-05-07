@@ -4,14 +4,8 @@ var WZ = {
 		
 		WZ.hideImages();
 		
-		if(WZ.detectHistory()) {
+		if(Modernizr.history) {
 			WZ.setupHistory();
-			
-			window.addEventListener("popstate", function(e) {
-				var linkHref = location.pathname.split("/"),
-					linkHrefId = linkHref[linkHref.length-2];
-				WZ.swapPhoto(linkHrefId);
-			}, false);
 		};
 	},
 	
@@ -22,9 +16,6 @@ var WZ = {
 	},
 	
 	// implementing History API
-	detectHistory : function() {
-		return !!(window.history && history.pushState);
-	},
 	setupHistory : function() {
 		var pathName = location.pathname,
 			pathNameSliced = pathName.split('/');
@@ -36,6 +27,12 @@ var WZ = {
 		
 		WZ.addClicker($('#photos-nav a[rel=prev]'), pathName, singlePhoto);
 		WZ.addClicker($('#photos-nav a[rel=next]'), pathName, singlePhoto);
+		
+		window.addEventListener("popstate", function(e) {
+			var linkHref = location.pathname.split("/"),
+				linkHrefId = linkHref[linkHref.length-2];
+			WZ.swapPhoto(linkHrefId);
+		}, false);
 	},
 	
 	addClicker : function(link, pathName, singlePhoto) {
