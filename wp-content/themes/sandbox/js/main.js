@@ -40,23 +40,27 @@ var WZ = {
 	
 	addClicker : function(link, pathName, singlePhoto) {
 		link.click(function(e) {
+			if(link.attr('href') != undefined) {
+				var $this = $(this),
+					$counter = $('#photos-nav meter'),
+					change = $this.attr('rel') == 'next' ? 1 : -1,
+					linkHref = link.attr('href').split("/"),
+					isSecond = linkHref.length > 3 ? true : false,
+					linkHrefId = !isSecond ? '' : linkHref[linkHref.length-2],
+					slash = !isSecond ? '' : '/';
+
+				history.pushState(null, null, pathName+linkHrefId+slash);
+				var updatedPhoto = linkHrefId == '' ? 1 : linkHrefId;
+				WZ.swapPhoto(updatedPhoto);
 			
-			var $this = $(this),
-				$counter = $('#photos-nav meter'),
-				change = $this.attr('rel') == 'next' ? 1 : -1,
-				linkHref = link.attr('href').split("/");
-				linkHrefId = linkHref[linkHref.length-2];
 
-			console.log('linkHrefId '+linkHrefId);
-			WZ.swapPhoto(linkHrefId);
-			history.pushState(null, null, pathName+linkHrefId+'/');
+				// changing photos index
+				var currentIndex = $counter.html(),
+				 	newIndex = eval(currentIndex) + change;
 
-			// changing photos index
-			var currentIndex = $counter.html(),
-			 	newIndex = eval(currentIndex) + change;
-
-			$counter.html(newIndex);
-			WZ.updatePhotoNav();
+				$counter.html(newIndex);
+				WZ.updatePhotoNav();
+			};
 			
 			e.preventDefault();
 		});
@@ -93,8 +97,6 @@ var WZ = {
 	
 	// swaps given photos
 	swapPhoto : function(destination) {
-		console.log('destination: ' + destination);
-		
 		// making new photo active
 		$('.photos .active').fadeOut('fast', function() {
 			$(this).removeClass('active');
