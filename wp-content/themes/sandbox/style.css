@@ -164,10 +164,15 @@ header h1 a {
 }
 .js .photos article {
 	display: none;
-
 }
 .js .photos .active {
 	display: block;
+}
+.js .photos .active img {
+	cursor: pointer;
+}
+.js .photos .active:last-child img {
+	cursor: default;
 }
 
 #photos-nav {

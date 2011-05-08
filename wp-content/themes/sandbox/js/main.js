@@ -7,6 +7,14 @@ var WZ = {
 		if(Modernizr.history) {
 			WZ.setupHistory();
 		};
+		
+		$('.photos img').click(function(){
+			/*var url = location.pathname.split('/');
+			var newId = url.length > 3 ? eval(url[url.length-2]) : 1;
+			console.log(newId + 1);
+			WZ.swapPhoto(newId + 1);*/
+			$('#photos-nav a[rel=next]').click();
+		})
 	},
 	
 	hideImages : function() {
@@ -63,6 +71,15 @@ var WZ = {
 		});
 	},
 	
+	// swaps given photos
+	swapPhoto : function(destination) {
+		// making new photo active
+		$('.photos .active').fadeOut('fast', function() {
+			$(this).removeClass('active');
+			$('.photos article').eq(destination-1).fadeIn('fast').addClass('active');
+		});
+	},
+	
 	// updating Photo Navigation after change
 	updatePhotoNav : function() {
 		var $counter = $('#photos-nav meter'),
@@ -90,15 +107,6 @@ var WZ = {
 				nextVal = index + 1;
 				$nextLink.attr('href', newPath + nextVal + '/');
 			};
-	},
-	
-	// swaps given photos
-	swapPhoto : function(destination) {
-		// making new photo active
-		$('.photos .active').fadeOut('fast', function() {
-			$(this).removeClass('active');
-			$('.photos article').eq(destination-1).fadeIn('fast').addClass('active');
-		});
 	}
 };
 
