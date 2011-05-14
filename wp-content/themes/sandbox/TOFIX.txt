@@ -1,2 +1,1 @@
-Updating current number on history.back
-fixing first photo when going back
+empty!

@@ -41,7 +41,7 @@ var WZ = {
 				linkHrefId = linkHref.length > 3 ? linkHref[linkHref.length-2] : 1;
 
 			WZ.swapPhoto(linkHrefId);
-			WZ.updatePhotoNav(linkHrefId);
+			WZ.updatePhotoNav(eval(linkHrefId));
 			
 		}, false);
 	},
@@ -66,7 +66,7 @@ var WZ = {
 				var currentIndex = $counter.html(),
 				 	newIndex = eval(currentIndex) + change;
 
-				WZ.updatePhotoNav(newIndex);
+				WZ.updatePhotoNav(eval(newIndex));
 			};
 			
 			e.preventDefault();
