@@ -38,8 +38,11 @@ var WZ = {
 		
 		window.addEventListener("popstate", function(e) {
 			var linkHref = location.pathname.split("/"),
+				//linkHrefId = linkHref > 3 ? linkHref[linkHref.length-2] : 1;
 				linkHrefId = linkHref[linkHref.length-2];
 			WZ.swapPhoto(linkHrefId);
+			WZ.updatePhotoNav(linkHrefId);
+			
 		}, false);
 	},
 	
@@ -54,6 +57,7 @@ var WZ = {
 					linkHrefId = !isSecond ? '' : linkHref[linkHref.length-2],
 					slash = !isSecond ? '' : '/';
 
+				console.log(linkHref);
 				history.pushState(null, null, pathName+linkHrefId+slash);
 				var updatedPhoto = linkHrefId == '' ? 1 : linkHrefId;
 				WZ.swapPhoto(updatedPhoto);
@@ -63,8 +67,8 @@ var WZ = {
 				var currentIndex = $counter.html(),
 				 	newIndex = eval(currentIndex) + change;
 
-				$counter.html(newIndex);
-				WZ.updatePhotoNav();
+				console.log('newIndex: '+newIndex);
+				WZ.updatePhotoNav(newIndex);
 			};
 			
 			e.preventDefault();
@@ -81,7 +85,7 @@ var WZ = {
 	},
 	
 	// updating Photo Navigation after change
-	updatePhotoNav : function() {
+	updatePhotoNav : function(newIndex) {
 		var $counter = $('#photos-nav meter'),
 			$prevLink = $('#photos-nav a[rel=prev]'),
 			$nextLink = $('#photos-nav a[rel=next]'),
@@ -90,6 +94,9 @@ var WZ = {
 			oldPath = location.pathname.split("/"),
 			newPath = '/' + oldPath[1] + '/';
 
+			// updating current count
+			$counter.html(newIndex);
+			
 			// setting previous photo link
 			if(index == 1) {
 				$prevLink.removeAttr('href');
@@ -104,7 +111,7 @@ var WZ = {
 			if(index == maxIndex) {
 				$nextLink.removeAttr('href');
 			} else {
-				nextVal = index + 1;
+				nextVal = newIndex + 1;
 				$nextLink.attr('href', newPath + nextVal + '/');
 			};
 	}
