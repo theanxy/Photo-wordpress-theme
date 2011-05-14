@@ -38,8 +38,8 @@ var WZ = {
 		
 		window.addEventListener("popstate", function(e) {
 			var linkHref = location.pathname.split("/"),
-				//linkHrefId = linkHref > 3 ? linkHref[linkHref.length-2] : 1;
-				linkHrefId = linkHref[linkHref.length-2];
+				linkHrefId = linkHref.length > 3 ? linkHref[linkHref.length-2] : 1;
+
 			WZ.swapPhoto(linkHrefId);
 			WZ.updatePhotoNav(linkHrefId);
 			
@@ -57,7 +57,6 @@ var WZ = {
 					linkHrefId = !isSecond ? '' : linkHref[linkHref.length-2],
 					slash = !isSecond ? '' : '/';
 
-				console.log(linkHref);
 				history.pushState(null, null, pathName+linkHrefId+slash);
 				var updatedPhoto = linkHrefId == '' ? 1 : linkHrefId;
 				WZ.swapPhoto(updatedPhoto);
@@ -67,7 +66,6 @@ var WZ = {
 				var currentIndex = $counter.html(),
 				 	newIndex = eval(currentIndex) + change;
 
-				console.log('change: '+change);
 				WZ.updatePhotoNav(newIndex);
 			};
 			
