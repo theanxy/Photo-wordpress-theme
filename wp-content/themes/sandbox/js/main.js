@@ -67,7 +67,7 @@ var WZ = {
 				var currentIndex = $counter.html(),
 				 	newIndex = eval(currentIndex) + change;
 
-				console.log('newIndex: '+newIndex);
+				console.log('change: '+change);
 				WZ.updatePhotoNav(newIndex);
 			};
 			
@@ -98,17 +98,17 @@ var WZ = {
 			$counter.html(newIndex);
 			
 			// setting previous photo link
-			if(index == 1) {
+			if(newIndex == 1) {
 				$prevLink.removeAttr('href');
-			} else if(index == 2) {
+			} else if(newIndex == 2) {
 				$prevLink.attr('href', newPath);
 			} else {
-				prevVal = index - 1;
+				prevVal = newIndex - 1;
 				$prevLink.attr('href', newPath + prevVal + '/');
 			};
 			
 			// setting next photo link
-			if(index == maxIndex) {
+			if(newIndex == maxIndex) {
 				$nextLink.removeAttr('href');
 			} else {
 				nextVal = newIndex + 1;
