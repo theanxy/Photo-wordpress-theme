@@ -38,7 +38,7 @@ $pageURL = $URL[1];
 	<p><a href="#">Facebook</a></p>
 </section>-->
 <section class="bio">
-	<a href="#">About</a>
+	<a href="#">About me</a>
 </section>
 <section class="photos">
 <?php
