@@ -31,15 +31,21 @@ $pageURL = $URL[1];
 ?>
 <!--<section class="bio">
 	<p>Hi!</p>
-	<p>I’m a web developer for XHTMLized.</p>
+	<p>I’m a lead developer at XHTMLized.</p>
+	<p>Photography is my hobby. Learn more about me or check my social media profiles.</p>
 	<p><a href="#">LinkedIn</a></p>
+	<p><a href="#">SlideShare</a></p>
+	<p><a href="#">Facebook</a></p>
 </section>-->
+<section class="bio">
+	<a href="#">About</a>
+</section>
 <section class="photos">
 <?php
 	$i = 0;
 	foreach( (array) $images as $attachment_id => $attachment ) : 
 	$i++;
-	$image_attributes = wp_get_attachment_image_src( $attachment_id, array(760,506) );
+	$image_attributes = wp_get_attachment_image_src( $attachment_id, array(760,760) );
 ?>
 <article<?php if($currentPhoto == $i) echo ' class="active"'; ?>>
 	<img src="<?php echo $image_attributes[0]?>" width="<?php echo $image_attributes[1] ?>" height="<?php echo $image_attributes[2] ?>" alt="" />
@@ -50,9 +56,9 @@ $pageURL = $URL[1];
 ?>
 </section>
 <nav id="photos-nav">
-	<a rel="prev"<?php if($currentPhoto > 1) echo ' href="/'.$pageURL.'/'.$prev.'/"'; ?>>&lt;</a>
+	<a rel="prev"<?php if($currentPhoto > 1) echo ' href="/'.$pageURL.'/'.$prev.'/"'; ?>>◀</a>
 	<span><meter min="1" max="<?php echo count($images); ?>"><?php echo $currentPhoto; ?></meter> / <?php echo count($images); ?></span>
-	<a rel="next"<?php if($currentPhoto < count($images)) echo ' href="/'.$pageURL.'/'.$next.'/"'; ?>>&gt;</a>
+	<a rel="next"<?php if($currentPhoto < count($images)) echo ' href="/'.$pageURL.'/'.$next.'/"'; ?>>▶</a>
 </nav>
 
 
