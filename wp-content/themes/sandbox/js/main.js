@@ -60,7 +60,6 @@ var WZ = {
 				history.pushState(null, null, pathName+linkHrefId+slash);
 				var updatedPhoto = linkHrefId == '' ? 1 : linkHrefId;
 				WZ.swapPhoto(updatedPhoto);
-			
 
 				// changing photos index
 				var currentIndex = $counter.html(),
