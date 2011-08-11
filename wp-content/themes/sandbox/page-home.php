@@ -8,20 +8,10 @@
 	<div id="container">
 		<div id="content">
 
-<?php the_post() ?>
-
-			<div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
-				<!--<h2 class="entry-title"><?php the_title() ?></h2>-->
-				<div class="entry-content">
-<?php the_content() ?>
-
-				</div>
-			</div><!-- .post -->
-
-<?php if ( get_post_custom_values('comments') ) comments_template() // Add a key+value of "comments" to enable comments on this page ?>
+			<img class="alignnone" title="NYC street" src="http://farm5.static.flickr.com/4132/4840737806_c9c0cff7f2_o.jpg" alt="" width="800" height="600" />
 
 		</div><!-- #content -->
 	</div><!-- #container -->
 
-<?php get_sidebar() ?>
+<?php get_sidebar('home') ?>
 <?php get_footer() ?>

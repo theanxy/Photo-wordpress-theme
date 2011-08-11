@@ -16,6 +16,9 @@
 	$prev = $currentPhoto - 1;
 	$next = $currentPhoto + 1;
 	
+	$imgWidth = 640;
+	$imgHeight = 560;
+	
 	$URL = explode('/', $_SERVER['REQUEST_URI']);
 	$pageURL = $URL[1];
 ?>
@@ -34,7 +37,7 @@
 	$i = 0;
 	foreach( (array) $images as $attachment_id => $attachment ) : 
 	$i++;
-	$image_attributes = wp_get_attachment_image_src( $attachment_id, array(600,400) );
+	$image_attributes = wp_get_attachment_image_src( $attachment_id, array($imgWidth,$imgHeight) );
 ?>
 <article<?php if($currentPhoto == $i) echo ' class="active"'; ?>>
 	<img src="<?php echo $image_attributes[0]?>" width="<?php echo $image_attributes[1] ?>" height="<?php echo $image_attributes[2] ?>" alt="<?php the_title(); echo ' photo '.$i ?>" />

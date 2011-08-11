@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Photos page
+ * Template Name: Photos page: JSON
  */
 ?>
 <?php get_header() ?>
