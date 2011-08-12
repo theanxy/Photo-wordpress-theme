@@ -96,20 +96,20 @@ var WZ = {
 			
 			// setting previous photo link
 			if(newIndex == 1) {
-				$prevLink.removeAttr('href');
+				$prevLink.removeAttr('href').attr('hidden', '');
 			} else if(newIndex == 2) {
-				$prevLink.attr('href', newPath);
+				$prevLink.removeAttr('hidden').attr('href', newPath);
 			} else {
 				prevVal = newIndex - 1;
-				$prevLink.attr('href', newPath + prevVal + '/');
+				$prevLink.removeAttr('hidden').attr('href', newPath + prevVal + '/');
 			};
 			
 			// setting next photo link
 			if(newIndex == maxIndex) {
-				$nextLink.removeAttr('href');
+				$nextLink.removeAttr('href').attr('hidden', '');
 			} else {
 				nextVal = newIndex + 1;
-				$nextLink.attr('href', newPath + nextVal + '/');
+				$nextLink.removeAttr('hidden').attr('href', newPath + nextVal + '/');
 			};
 	}
 };
