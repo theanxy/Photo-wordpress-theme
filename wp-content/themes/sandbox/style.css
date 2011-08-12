@@ -161,9 +161,9 @@ header h1 a {
 }
 .photos {
 	position: relative;
-	margin-left: 240px;
+	margin-left: 160px;
 }
-.js .photos article {
+.js .photos figure {
 	display: none;
 }
 .js .photos .active {
@@ -175,6 +175,11 @@ header h1 a {
 }
 .js .photos .active:last-child img {
 	cursor: default;
+}
+.photos figcaption {
+	padding: 10px;
+	color: #666;
+	font-size: 12px;
 }
 
 #photos-nav {

@@ -18,8 +18,8 @@ var WZ = {
 	},
 	
 	hideImages : function() {
-		if(!$('.photos article.active').length) {
-			$('.photos article:eq(0)').addClass('active');
+		if(!$('.photos figure.active').length) {
+			$('.photos figure:eq(0)').addClass('active');
 		}
 	},
 	
@@ -77,7 +77,7 @@ var WZ = {
 		// making new photo active
 		$('.photos .active').fadeOut('fast', function() {
 			$(this).removeClass('active');
-			$('.photos article').eq(destination-1).fadeIn('fast').addClass('active');
+			$('.photos figure').eq(destination-1).fadeIn('fast').addClass('active');
 		});
 	},
 	
