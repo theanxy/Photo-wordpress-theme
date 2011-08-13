@@ -190,6 +190,7 @@ header h1 a {
 	top: 0;
 	left: 160px;
 	right: 0;
+	height: 532px;
 	font: bold 2em 'LeagueGothicRegular', sans-serif;
 }
 #photos-nav span {
@@ -207,13 +208,20 @@ header h1 a {
 }
 #photos-nav a {
 	color: #000;
+	height: 532px;
+	line-height: 532px;
+	padding: 0 5px 5px 10px;
 	font-size: 75%;
-	margin: 250px 0 0 -30px;
+	margin: 0 0 0 -35px;
 	float: left;
 }
 #photos-nav a[rel=next] {
 	float: right;
-	margin: 250px -30px 0 0;
+	padding: 0 10px 5px 5px;
+	margin: 0 -35px 0 0;
+}
+#photos-nav a:hover {
+	background: #ddd;
 }
 
 /* 2.5 Sidebar

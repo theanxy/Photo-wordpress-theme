@@ -17,7 +17,7 @@
 	$next = $currentPhoto + 1;
 	
 	$imgWidth = 800;
-	$imgHeight = 560;
+	$imgHeight = 532;
 	
 	$URL = explode('/', $_SERVER['REQUEST_URI']);
 	$pageURL = $URL[1];
@@ -32,27 +32,6 @@
 	if (!empty($images)) :
 ?>
 
-<section class="photos">
-<?php
-	$i = 0;
-	foreach( (array) $images as $attachment_id => $attachment ) : 
-	$i++;
-	$image_attributes = wp_get_attachment_image_src( $attachment_id, array($imgWidth,$imgHeight) );
-?>
-<figure<?php if($currentPhoto == $i) echo ' class="active"'; ?>>
-	<img src="<?php echo $image_attributes[0]?>" width="<?php echo $image_attributes[1] ?>" height="<?php echo $image_attributes[2] ?>" alt="<?php the_title(); echo ' photo '.$i ?>" />
-<?php
-	if(!empty($attachment->post_excerpt)) {
-		echo "	<figcaption>".$attachment->post_excerpt."</figcaption>\n";
-	}
-?>
-</figure>
-<?php
-	endforeach;
-	endif;
-?>
-</section>
-
 <?php
 	if (count($images) > 0) :
 ?>
@@ -65,6 +44,23 @@
 	endif;
 ?>
 
+<section class="photos">
+<?php
+	$i = 0;
+	foreach( (array) $images as $attachment_id => $attachment ) : 
+	$i++;
+	$image_attributes = wp_get_attachment_image_src( $attachment_id, array($imgWidth,$imgHeight) );
+?>
+	<figure<?php if($currentPhoto == $i) echo ' class="active"'; ?>><img src="<?php echo $image_attributes[0]?>" width="<?php echo $image_attributes[1] ?>" height="<?php echo $image_attributes[2] ?>" alt="<?php the_title(); echo ' photo '.$i ?>" /><?php
+	if(!empty($attachment->post_excerpt)) {
+		echo "<figcaption>".$attachment->post_excerpt."</figcaption>";
+	}
+?></figure>
+<?php
+	endforeach;
+	endif;
+?>
+</section>
 
 </div><!-- #content -->
 
