@@ -9,5 +9,7 @@
 </section>
 */ ?>
 <section class="bio">
-	Home <a href="#">About me</a>
+	<p>Hi!
+	
+	<p>I develop websites during the day, and take photos after hours. For other information, check these profiles:
 </section>

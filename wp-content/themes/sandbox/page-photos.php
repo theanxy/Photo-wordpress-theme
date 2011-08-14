@@ -25,7 +25,7 @@
 
 <div id="content">
 	
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 
 <?php
 	$images =& get_children( 'post_type=attachment&post_mime_type=image&post_parent='.$currentID.'&orderby=menu_order&order=ASC' );

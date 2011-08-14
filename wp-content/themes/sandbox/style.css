@@ -106,7 +106,7 @@ body {
 
 #wrapper {
 	position: relative;
-	width: 960px;
+	width: 920px;
 	margin: 0 auto;
 }
 
@@ -115,27 +115,38 @@ body {
 ------------------------------------------------------------------------------*/
 
 header {
-	width: 280px;
 	float: left;
-	margin-right: 20px;
+	margin: 20px 20px 0 0;
 }
 header h1 a {
 	display: block;
-	font-family: 'LeagueGothicRegular', sans-serif;
+	font: 36px/40px 'LeagueGothicRegular', sans-serif;
 	text-transform: uppercase;
-	font-size: 3.5em;
 	letter-spacing: 2px;
-	margin: 20px 0;
 	color: #000;
+}
+header small {
+	color: #ccc;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	word-spacing: 4px;
+	position: relative;
+	top: -3px;
+	display: block;
+	width: 14.5em;
+	text-align: center;
 }
 
 /* 2.3 Navigation
 ------------------------------------------------------------------------------*/
 
 #menu {
-	padding: 48px 0 0;
+	float: right;
+	margin: 20px 0 0;
 	font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
 	text-transform: uppercase;
+	line-height: 50px;
+	letter-spacing: 1px;
 }
 #menu li {
 	display: inline;
@@ -149,20 +160,32 @@ header h1 a {
 #content {
 	clear: both;
 	position: relative;
+	border-top: 1px dotted #ccc;
+	padding: 22px 0 0;
 }
 .bio {
 	clear: both;
 	width: 160px;
 	position: absolute;
 	left: 0;
-	font: .95em/1.6 "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+	font: 18px/1.6 "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
 .bio p {
 	margin: 0 0 1em;
 }
+.home .bio {
+	position: static;
+	width: auto;
+	padding: 30px 60px 15px 120px;
+	margin: 30px 0 15px;
+	border: 1px dotted #ccc;
+	border-width: 0 0 1px;
+}
+
+
 .photos {
 	position: relative;
-	margin-left: 160px;
+	padding: 0 60px;
 }
 .js .photos figure {
 	display: none;
@@ -178,7 +201,19 @@ header h1 a {
 .js .photos .active:last-child img {
 	cursor: default;
 }
+
+.home .photos {
+	display: none;
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+}
+.home .photos img {
+	position: absolute;
+	top: -100px;
+}
 .photos figcaption {
+	float: left;
 	padding: 10px;
 	color: #666;
 	font-size: 12px;
@@ -188,19 +223,22 @@ header h1 a {
 	position: absolute;
 	color: #000;
 	top: 0;
-	left: 160px;
+	left: 0;
 	right: 0;
-	height: 532px;
+	margin: 0 -20px;
+	height: 100%;
 	font: bold 2em 'LeagueGothicRegular', sans-serif;
 }
 #photos-nav span {
+	font-size: 21px;
 	position: absolute;
-	top: -50px;
-	right: 0;
+	bottom: -35px;
+	right: 80px;
+	padding: 0 10px;
 }
 #photos-nav meter {
 	display: inline-block;
-	width: .5em;
+	width: .7em;
 	text-align: right;
 	height: auto;
 	-webkit-appearance: none;
@@ -208,17 +246,15 @@ header h1 a {
 }
 #photos-nav a {
 	color: #000;
-	height: 532px;
-	line-height: 532px;
-	padding: 0 5px 5px 10px;
+	padding: 20px;
 	font-size: 75%;
-	margin: 0 0 0 -35px;
 	float: left;
+	position: relative;
+	top: 35%;
+	z-index: 5;
 }
 #photos-nav a[rel=next] {
 	float: right;
-	padding: 0 10px 5px 5px;
-	margin: 0 -35px 0 0;
 }
 #photos-nav a:hover {
 	background: #ddd;

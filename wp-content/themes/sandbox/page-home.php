@@ -11,7 +11,7 @@
 	$imgWidth = 800;
 	$imgHeight = 560;
 ?>
-<div id="content">
+<div id="content" class="home">
 	
 <?php get_sidebar('home') ?>
 

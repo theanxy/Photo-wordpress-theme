@@ -21,6 +21,7 @@
 
 	<header>
 		<h1><a href="<?php bloginfo('home') ?>/" rel="home"><?php bloginfo('name') ?></a></h1>
+		<small>voi·tek za·yats</small>
 	</header>
 
 	<nav id="menu">
