@@ -126,6 +126,7 @@ header h1 a {
 	letter-spacing: 2px;
 	color: #000;
 }
+
 header small {
 	visibility: hidden;
 	color: #ccc;
@@ -193,11 +194,21 @@ header:hover small {
 	padding: 0 60px;
 }
 .js .photos figure {
-	display: none;
+	position: absolute;
+	display: block;
+	opacity: 0;
+	-webkit-transition: opacity .5s;
 }
 .js .photos .active {
-	display: block;
+	opacity: 1;
 }
+.js .photos .active:hover {
+	opacity: .5;
+}
+.js .photos .test {
+	opacity: 0;
+}
+
 .js .photos .active img {
 	cursor: pointer;
 	display: block;

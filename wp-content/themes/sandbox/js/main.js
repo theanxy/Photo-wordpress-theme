@@ -74,11 +74,23 @@ var WZ = {
 	
 	// swaps given photos
 	swapPhoto : function(destination) {
-		// making new photo active
-		$('.photos .active').fadeOut('fast', function() {
-			$(this).removeClass('active');
-			$('.photos figure').eq(destination-1).fadeIn('fast').addClass('active');
-		});
+		// making new photo active v1
+		
+		// $('.photos .active').fadeOut('fast', function() {
+		// 	$(this).removeClass('active');
+		// 	$('.photos figure').eq(destination-1).fadeIn('fast').addClass('active');
+		// });
+		
+		function showPhotos(destination) {
+			$(".photos figure").eq(destination-1).addClass("active");
+		}
+		
+		// making new photo active v2
+		$('.photos .active').removeClass('active');
+
+		window.setTimeout(function() {
+			$(".photos figure").eq(destination-1).addClass("active");
+		}, 500);
 	},
 	
 	// updating Photo Navigation after change
