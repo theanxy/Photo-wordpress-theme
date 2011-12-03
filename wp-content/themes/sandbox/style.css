@@ -116,7 +116,8 @@ body {
 
 header {
 	float: left;
-	margin: 20px 20px 0 0;
+	position: relative;
+	margin: 20px 0 13px 0;
 }
 header h1 a {
 	display: block;
@@ -126,15 +127,19 @@ header h1 a {
 	color: #000;
 }
 header small {
+	visibility: hidden;
 	color: #ccc;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	word-spacing: 4px;
-	position: relative;
-	top: -3px;
+	position: absolute;
 	display: block;
+	top: 3.3em;
 	width: 14.5em;
 	text-align: center;
+}
+header:hover small {
+	visibility: visible;
 }
 
 /* 2.3 Navigation
