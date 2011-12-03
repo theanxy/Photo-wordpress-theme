@@ -128,7 +128,6 @@ header h1 a {
 }
 
 header small {
-	visibility: hidden;
 	color: #ccc;
 	text-transform: uppercase;
 	letter-spacing: 3px;
@@ -138,9 +137,11 @@ header small {
 	top: 3.3em;
 	width: 14.5em;
 	text-align: center;
+	-webkit-transition: opacity .1s linear;
+	opacity: 0;
 }
 header:hover small {
-	visibility: visible;
+	opacity: 1;
 }
 
 /* 2.3 Navigation
@@ -197,7 +198,7 @@ header:hover small {
 	position: absolute;
 	display: block;
 	opacity: 0;
-	-webkit-transition: opacity .5s;
+	-webkit-transition: opacity .3s ease;
 }
 .js .photos .active {
 	opacity: 1;

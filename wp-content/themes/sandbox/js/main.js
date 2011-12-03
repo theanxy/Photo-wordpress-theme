@@ -90,7 +90,7 @@ var WZ = {
 
 		window.setTimeout(function() {
 			$(".photos figure").eq(destination-1).addClass("active");
-		}, 500);
+		}, 250);
 	},
 	
 	// updating Photo Navigation after change
