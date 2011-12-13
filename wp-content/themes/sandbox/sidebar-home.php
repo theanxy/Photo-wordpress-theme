@@ -8,6 +8,7 @@
 	<p><a href="#">Facebook</a></p>
 </section>
 */ ?>
+<img src="/img/Wojtek.jpg" alt="Wojtek Zając" class="photo">
 <section class="bio">
 	<p>Hi!
 	
