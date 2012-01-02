@@ -190,8 +190,6 @@ header:hover small {
 .home .photo {
 	float: right;
 	margin: 0 50px 0 50px;
-	height: auto;
-	width: 300px;
 }
 
 
@@ -199,20 +197,17 @@ header:hover small {
 	position: relative;
 	padding: 0 60px;
 }
-.js .photos figure {
+.photos figure {
 	position: absolute;
 	display: block;
 	opacity: 0;
 	-webkit-transition: opacity .3s ease;
 }
-.js .photos .active {
+.asdf .photos .active {
 	opacity: 1;
 }
 .js .photos .active:hover {
 	opacity: .5;
-}
-.js .photos .test {
-	opacity: 0;
 }
 
 .js .photos .active img {

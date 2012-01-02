@@ -8,9 +8,11 @@
 	<p><a href="#">Facebook</a></p>
 </section>
 */ ?>
-<img src="/img/Wojtek.jpg" alt="Wojtek Zając" class="photo">
+<img src="/img/Wojtek2.jpg" alt="Wojtek Zając" class="photo">
 <section class="bio">
 	<p>Hi!
 	
-	<p>I develop websites during the day, and take photos after hours. For other information, check these profiles:
+	<p>I make websites during the day, <br>and take photos after hours.
+		
+	<p>You can friend me here:
 </section>
