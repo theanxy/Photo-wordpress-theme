@@ -171,21 +171,28 @@ header:hover small {
 	padding: 22px 0 0;
 }
 .bio {
-	width: 160px;
-	position: absolute;
-	left: 0;
-	font: 18px/1.6 "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+	width: 320px;
+	margin: 150px 0 0 40px;
+	border-width: 0 0 1px;
+	font: 400 16px/1.8 Archer, Georgia, "Times New Roman", serif;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 .bio p {
-	margin: 0 0 1em;
+	margin: 0 0 1.5em;
 }
-.home .bio {
-	position: static;
-	width: auto;
-	padding: 100px 60px 15px 120px;
-	margin: 200px 0 15px;
-	border: 1px dotted #ccc;
-	border-width: 0 0 1px;
+.bio p:first-child {
+	font-size: 18px;
+}
+.bio .more {
+	display: none;
+}
+.bio a {
+	border-bottom: 1px solid #ddd;
+	font-weight: 500;
+}
+.bio a:hover {
+	background: #eee;
 }
 .home .photo {
 	float: right;
