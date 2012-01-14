@@ -197,12 +197,14 @@ header:hover small {
 .home .photo {
 	float: right;
 	margin: 0 50px 0 50px;
+	height: 520px;
 }
 
 
 .photos {
 	position: relative;
 	padding: 0 60px;
+	height: 536px;
 }
 .photos figure {
 	position: absolute;
@@ -260,10 +262,13 @@ header:hover small {
 	right: 80px;
 	padding: 0 10px;
 }
-#photos-nav meter {
+#photos-nav mark {
 	display: inline-block;
 	width: .7em;
+	font-style: normal;
 	text-align: right;
+	background: none transparent;
+	border: 0;
 	height: auto;
 	-webkit-appearance: none;
 	vertical-align: 0;
@@ -274,14 +279,15 @@ header:hover small {
 	font-size: 75%;
 	float: left;
 	position: relative;
-	top: 35%;
+	top: 47%;
 	z-index: 5;
+	-webkit-transition: background-color .2s ease;
 }
 #photos-nav a[rel=next] {
 	float: right;
 }
 #photos-nav a:hover {
-	background: #ddd;
+	background: #efefef;
 }
 
 /* 2.5 Sidebar

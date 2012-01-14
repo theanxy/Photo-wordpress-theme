@@ -37,7 +37,7 @@
 ?>
 <nav id="photos-nav">
 	<a rel="prev"<?php if($currentPhoto > 1) echo ' href="/'.$pageURL.'/'.$prev.'/"'; ?>>◀</a>
-	<span><meter min="1" max="<?php echo count($images); ?>"><?php echo $currentPhoto; ?></meter> / <?php echo count($images); ?></span>
+	<span><mark min="1" max="<?php echo count($images); ?>"><?php echo $currentPhoto; ?></mark> / <?php echo count($images); ?></span>
 	<a rel="next"<?php if($currentPhoto < count($images)) echo ' href="/'.$pageURL.'/'.$next.'/"'; ?>>▶</a>
 </nav>
 <?php

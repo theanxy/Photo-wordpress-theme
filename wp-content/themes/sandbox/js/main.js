@@ -50,7 +50,7 @@ var WZ = {
 		link.click(function(e) {
 			if(link.attr('href') != undefined) {
 				var $this = $(this),
-					$counter = $('#photos-nav meter'),
+					$counter = $('#photos-nav mark'),
 					change = $this.attr('rel') == 'next' ? 1 : -1,
 					linkHref = link.attr('href').split("/"),
 					isSecond = linkHref.length > 3 ? true : false,
@@ -95,7 +95,7 @@ var WZ = {
 	
 	// updating Photo Navigation after change
 	updatePhotoNav : function(newIndex) {
-		var $counter = $('#photos-nav meter'),
+		var $counter = $('#photos-nav mark'),
 			$prevLink = $('#photos-nav a[rel=prev]'),
 			$nextLink = $('#photos-nav a[rel=next]'),
  			index = eval($counter.html()),
