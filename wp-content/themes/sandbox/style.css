@@ -209,6 +209,7 @@ header:hover small {
 .photos figure {
 	position: absolute;
 	display: block;
+	width: 800px;
 	opacity: 0;
 	-webkit-transition: opacity .3s ease;
 }

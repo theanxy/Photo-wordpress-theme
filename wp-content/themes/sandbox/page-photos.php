@@ -17,7 +17,7 @@
 	$next = $currentPhoto + 1;
 	
 	$imgWidth = 800;
-	$imgHeight = 532;
+	$imgHeight = 800;
 	
 	$URL = explode('/', $_SERVER['REQUEST_URI']);
 	$pageURL = $URL[1];
