@@ -23,21 +23,19 @@
 		<p><a href="#">Facebook</a></p>
 	</section>
 	*/ ?>
-	<img src="/img/Wojtek2.jpg" alt="Wojtek Zając" class="photo">
+	<img src="/img/Wojtek5.jpg" alt="Wojtek Zając" class="photo">
 	<section class="bio">
 		<p>Hi there! I’m glad you visited<br> my photo gallery.
 
-		<p>I’m 21 and I founded/lead polish office of <a href="http://xhtmlized.com">XHTMLized</a>.
+		<p>I’m a founder/president at polish office<br> of <a href="http://XHTMLized.com">XHTMLized</a>.
 
-		<p class="more">I’m a <a href="http://slideshare.com/wojciechzajac">public speaker</a> with topics ranging web standards, UX, and typography.
+		<!--<p>I’m a <a href="http://slideshare.com/wojciechzajac">public speaker</a> with topics ranging web standards, UX, and typography.-->
 			
-		<p>I study HCI, listen to <a href="http://last.fm/user/buterux">music</a>, and take photos a lot.
+		<p>I study <a href="http://en.wikipedia.org/wiki/Human-computer_interaction">HCI</a> at <a href="http://en.wikipedia.org/wiki/Jagiellonian_University">UJ</a>, listen to <a href="http://last.fm/user/buterux">music</a>, and take photos a lot.
 			
-		<p class="more">I built the first public version of <a href="http://twitter.com">Twitter</a>, and worked on its front-end between 2006—2009.
+		<!--<p>I built the first public version of <a href="http://twitter.com">Twitter</a>, and worked on its front-end between 2006—2009.-->
 			
-		<p class="more">You should <a href="http://twitter.com/theanxy">follow me</a>.
-		
-		<p>Learn more about me.
+		<p class="social"><img src="/img/twitter.png" alt=""><img src="/img/facebook.png" alt=""><img src="/img/lastfm.png" alt=""><img src="/img/flickr.png" alt=""><img src="/img/linkedin.png" alt="">
 	</section>
 
 
