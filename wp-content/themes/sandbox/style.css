@@ -196,8 +196,12 @@ header:hover small {
 }
 .home .photo {
 	float: right;
-	margin: 0 50px 0 50px;
-	height: 520px;
+	margin: 100px 50px 0 50px;
+/*	height: 520px;*/
+	height: 150px;
+}
+.social {
+	opacity: 0.7;
 }
 
 
