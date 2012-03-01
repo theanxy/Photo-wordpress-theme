@@ -212,8 +212,10 @@ header:hover small {
 }
 .photos figure {
 	position: absolute;
+	cursor: pointer;
 	display: block;
 	width: 800px;
+	height: 800px;
 	opacity: 0;
 	-webkit-transition: opacity .3s ease;
 }
@@ -224,13 +226,9 @@ header:hover small {
 	opacity: .5;
 }
 
-.js .photos .active img {
-	cursor: pointer;
+.js .photos img {
 	display: block;
 	margin: 0 auto;
-}
-.js .photos .active:last-child img {
-	cursor: default;
 }
 
 .home .photos {
