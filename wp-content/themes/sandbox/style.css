@@ -226,11 +226,8 @@ header:hover small {
 	-o-transition: opacity .3s ease;
 	transition: opacity .3s ease;
 }
-.asdf .photos .active {
+.loaded .photos .active {
 	opacity: 1;
-}
-.js .photos .active:hover {
-	opacity: .5;
 }
 
 .js .photos img {

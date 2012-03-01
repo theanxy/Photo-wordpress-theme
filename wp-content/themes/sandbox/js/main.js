@@ -1,6 +1,6 @@
 var WZ = {
 	onReady : function() {
-		$('html').removeClass('no-js').addClass('js asdf');
+		$('html').removeClass('no-js').addClass('loaded');
 		
 		WZ.hideImages();
 		
