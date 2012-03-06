@@ -1,1 +1,4 @@
-empty!
+Add "next image" link on start
+hide on hover
+
+fb like bottom right corner

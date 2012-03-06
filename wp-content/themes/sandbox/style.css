@@ -117,14 +117,18 @@ body {
 header {
 	float: left;
 	position: relative;
-	margin: 20px 0 13px 0;
+	margin: 50px 0 0;
 }
 header h1 a {
 	display: block;
-	font: 36px/40px 'LeagueGothicRegular', sans-serif;
-	text-transform: uppercase;
+	font: bold italic 42px/40px 'Economica', 'LeagueGothicRegular', sans-serif;
+/*	text-transform: uppercase;*/
 	letter-spacing: 2px;
 	color: #000;
+}
+header span {
+	display: block;
+	margin-left: 14px;
 }
 
 header small {
@@ -143,6 +147,7 @@ header small {
 	-o-transition: opacity .1s linear;
 	transition: opacity .1s linear;
 	opacity: 0;
+	display: none;
 }
 header:hover small {
 	opacity: 1;
@@ -151,18 +156,25 @@ header:hover small {
 /* 2.3 Navigation
 ------------------------------------------------------------------------------*/
 
-#menu {
+nav[role=navigation] {
 	clear: both;
 	position: fixed;
-	top: 100px;
-	margin: 20px 0 0;
+	top: 130px;
+	margin: 20px 0 0 60px;
 /*	font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;*/
 	font-family: "Courier new", Courier, serif;
 /*	text-transform: uppercase;*/
+/*	font: italic 400 14px/1.8 Archer, Georgia, "Times New Roman", serif;*/
 	letter-spacing: 1px;
 }
+
 #menu li {
 	margin: 15px 0 0 0;
+}
+#menu + ul {
+	font-style: normal;
+	font-weight: bold;
+	margin: 40px 0 0;
 }
 
 
@@ -200,8 +212,12 @@ header:hover small {
 }
 
 .photos figcaption {
-	float: left;
-	padding: 10px;
+	position: fixed;
+	left: 100px;
+	border-top: 2px solid #000;
+	padding: 14px 0 0;
+	width: 100px;
+	top: 500px;
 	color: #666;
 	font-size: 12px;
 }
@@ -235,6 +251,7 @@ header:hover small {
 	vertical-align: 0;
 }
 #photos-nav a {
+	display: none;
 	color: #000;
 	padding: 20px;
 	font-size: 75%;

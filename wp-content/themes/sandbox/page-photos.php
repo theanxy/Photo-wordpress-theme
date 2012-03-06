@@ -54,6 +54,8 @@
 	<figure<?php if($currentPhoto == $i) echo ' class="active"'; ?>><img src="<?php echo $image_attributes[0]?>" width="<?php echo $image_attributes[1] ?>" height="<?php echo $image_attributes[2] ?>" alt="<?php the_title(); echo ' photo '.$i ?>" /><?php
 	if(!empty($attachment->post_excerpt)) {
 		echo "<figcaption>".$attachment->post_excerpt."</figcaption>";
+	} else {
+		echo "<figcaption>Test</figcaption>";
 	}
 ?></figure>
 <?php
