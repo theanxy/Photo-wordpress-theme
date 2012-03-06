@@ -106,8 +106,8 @@ body {
 
 #wrapper {
 	position: relative;
-	width: 920px;
-	margin: 0 auto;
+	width: auto;
+	margin: 0 50px;
 }
 
 
@@ -152,16 +152,17 @@ header:hover small {
 ------------------------------------------------------------------------------*/
 
 #menu {
-	float: right;
+	clear: both;
+	position: fixed;
+	top: 100px;
 	margin: 20px 0 0;
-	font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
-	text-transform: uppercase;
-	line-height: 50px;
+/*	font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;*/
+	font-family: "Courier new", Courier, serif;
+/*	text-transform: uppercase;*/
 	letter-spacing: 1px;
 }
 #menu li {
-	display: inline;
-	margin: 0 20px 0 0;
+	margin: 15px 0 0 0;
 }
 
 
@@ -169,10 +170,10 @@ header:hover small {
 ------------------------------------------------------------------------------*/
 
 #content {
-	clear: both;
 	position: relative;
-	border-top: 1px dotted #ccc;
+	clear: both;
 	padding: 22px 0 0;
+	margin-left: 250px;
 }
 .bio {
 	width: 320px;
@@ -212,13 +213,10 @@ header:hover small {
 .photos {
 	position: relative;
 	padding: 0 60px;
-	height: 536px;
 }
 .photos figure {
 	position: absolute;
 	display: block;
-	width: 800px;
-	height: 800px;
 	opacity: 0;
 	-webkit-transition: opacity .3s ease;
 	-moz-transition: opacity .3s ease;
@@ -228,11 +226,10 @@ header:hover small {
 }
 .loaded .photos .active {
 	opacity: 1;
+	position: static;
 }
 
 .js .photos img {
-	display: block;
-	margin: 0 auto;
 	cursor: pointer;
 }
 
