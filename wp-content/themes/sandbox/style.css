@@ -192,9 +192,10 @@ nav[role=navigation] {
 	position: relative;
 	padding: 0 60px;
 }
-.photos figure {
+#content .photos figure {
 	position: absolute;
 	display: block;
+	top: 0;
 	opacity: 0;
 	-webkit-transition: opacity .3s ease;
 	-moz-transition: opacity .3s ease;
@@ -202,7 +203,7 @@ nav[role=navigation] {
 	-o-transition: opacity .3s ease;
 	transition: opacity .3s ease;
 }
-.loaded .photos .active {
+.loaded #content .active {
 	opacity: 1;
 	position: static;
 }
