@@ -107,7 +107,7 @@ body {
 #wrapper {
 	position: relative;
 	width: auto;
-	margin: 0 50px;
+	margin: 0 10px 0 50px;
 }
 
 
@@ -190,7 +190,7 @@ nav[role=navigation] {
 
 .photos {
 	position: relative;
-	padding: 0 60px;
+	padding: 0 0 0 60px;
 }
 #content .photos figure {
 	position: absolute;
@@ -208,6 +208,10 @@ nav[role=navigation] {
 	position: static;
 }
 
+.photos img {
+	max-width: 100%;
+	height: auto;
+}
 .js .photos img {
 	cursor: pointer;
 }
@@ -223,33 +227,38 @@ nav[role=navigation] {
 	font-size: 12px;
 }
 
+
+/* Photos nav */
 #photos-nav {
 	position: absolute;
-	color: #000;
 	top: 0;
-	left: 0;
-	right: 0;
+	left: 80px;
+	color: #000;
+	width: 100px;
 	margin: 0 -20px;
-	height: 100%;
-	font: bold 2em 'LeagueGothicRegular', sans-serif;
+/*	font: bold 2em 'LeagueGothicRegular', sans-serif;*/
+	font: 1em Courier;
+	color: #666;
 }
-#photos-nav span {
+/*#photos-nav span {
 	font-size: 21px;
 	position: absolute;
 	bottom: -35px;
 	right: 80px;
 	padding: 0 10px;
 }
-#photos-nav mark {
+*/#photos-nav mark {
 	display: inline-block;
 	width: .7em;
 	font-style: normal;
 	text-align: right;
+	font-weight: normal;
 	background: none transparent;
 	border: 0;
 	height: auto;
 	-webkit-appearance: none;
 	vertical-align: 0;
+	color: #666;
 }
 #photos-nav a {
 	display: none;
