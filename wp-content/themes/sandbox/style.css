@@ -304,17 +304,17 @@ nav[role=navigation] {
 	width: 320px;
 	margin: 150px 0 0 40px;
 	border-width: 0 0 1px;
-	font: 400 16px/1.8 Archer, Georgia, "Times New Roman", serif;
+	font: 400 22px/1.8 Archer, Georgia, "Times New Roman", serif;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
 .bio p {
 	margin: 0 0 1.5em;
 }
-.bio p:first-child {
+/*.bio p:first-child {
 	font-size: 18px;
 }
-.bio .more {
+*/.bio .more {
 	display: none;
 }
 .bio a {

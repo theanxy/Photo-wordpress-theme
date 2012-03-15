@@ -25,13 +25,15 @@
 	*/ ?>
 	<img src="/img/Wojtek5.jpg" alt="Wojtek Zając" class="photo">
 	<section class="bio">
-		<p>Hi there! I’m glad you visited<br> my photo gallery.
-
+		<p>Hi there! I’m glad you visited<br> my website.
+		
 		<p>I’m a founder/president at polish office<br> of <a href="http://XHTMLized.com">XHTMLized</a>.
 
 		<!--<p>I’m a <a href="http://slideshare.com/wojciechzajac">public speaker</a> with topics ranging web standards, UX, and typography.-->
 			
 		<p>I study <a href="http://en.wikipedia.org/wiki/Human-computer_interaction">HCI</a> at <a href="http://en.wikipedia.org/wiki/Jagiellonian_University">UJ</a>, listen to <a href="http://last.fm/user/buterux">music</a>, and take photos a lot.
+			
+		<p>Now check out my <a href="/new-york/">photos section</a>.
 			
 		<!--<p>I built the first public version of <a href="http://twitter.com">Twitter</a>, and worked on its front-end between 2006—2009.-->
 			

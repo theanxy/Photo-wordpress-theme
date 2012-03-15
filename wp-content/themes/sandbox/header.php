@@ -25,6 +25,7 @@
 		<small>voi·tek za·yats</small>
 	</header>
 
+<?php if (!is_page('home')) { ?>
 	<nav role="navigation">
 		<ul id="menu">
 		<?php wp_list_pages('title_li=&sort_column=menu_order&exclude=4'); ?>
@@ -33,3 +34,4 @@
 			<li><a href="">Blog</a></li>
 		</ul>
 	</nav>
+<?php } ?>
