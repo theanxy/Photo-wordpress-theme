@@ -96,9 +96,9 @@ a:hover {  }
 }
 
 body {
-	background: #fff /*url(img/bg.gif)*/ repeat 50% 50%;
+	background: #fff;
 	color: #333;
-	border-top: 5px solid #66b0d3;
+	border-top: 5px solid #bfd5d9;
 }
 
 /* 2.1 Container
@@ -107,7 +107,9 @@ body {
 #wrapper {
 	position: relative;
 	width: auto;
-	margin: 0 10px 0 50px;
+	padding: 0 10px 0 50px;
+	min-height: 877px;
+	background: #fff url(/img/bg.png) no-repeat 0 0;
 }
 
 
@@ -300,21 +302,29 @@ nav[role=navigation] {
 /* 3.0 Homepage
 ------------------------------------------------------------------------------*/
 
+#content.home {
+	width: auto;
+	margin: 0;
+	position: relative;
+	z-index: 5;
+}
+
 .bio {
-	width: 320px;
-	margin: 150px 0 0 40px;
+	color: #222;
+	width: 520px;
+	margin: 150px 0 0 10px;
 	border-width: 0 0 1px;
-	font: 400 22px/1.8 Archer, Georgia, "Times New Roman", serif;
+	font: 400 18px/1.5 Archer, Georgia, "Times New Roman", serif;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
 .bio p {
 	margin: 0 0 1.5em;
 }
-/*.bio p:first-child {
-	font-size: 18px;
+.bio p:first-child {
+	font-size: 24px;
 }
-*/.bio .more {
+.bio .more {
 	display: none;
 }
 .bio a {
@@ -322,20 +332,29 @@ nav[role=navigation] {
 	font-weight: 500;
 }
 .bio a:hover {
-	background: #eee;
+/*	background: #eee;*/
+	background: rgba(220,220,220,0.5);
 }
 .home .photo {
-	float: right;
-	margin: 100px 50px 0 50px;
-/*	height: 520px;*/
-	height: 150px;
+	position: absolute;
+	left: -40px;
+	top: -50px;
+	z-index: -10;
 }
 .social {
 	opacity: 0.7;
+	margin: 0;
+}
+.social li {
+	display: inline-block;
+}
+.social a,
+.social a:hover {
+	border: 0;
+	background: transparent;
 }
 
 .home .photos {
-	display: none;
 	height: 500px;
 	overflow: hidden;
 	position: relative;
