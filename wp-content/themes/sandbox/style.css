@@ -67,8 +67,8 @@ input:valid, textarea:valid   {  }
 input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
-::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
-::selection { background:#FF5E99; color:#fff; text-shadow: none; }
+::-moz-selection{ background: #ff7070; color:#fff; text-shadow: none; }
+::selection { background:#ff7070; color:#fff; text-shadow: none; }
 a:link { -webkit-tap-highlight-color: #FF5E99; }
 
 button {  width: auto; overflow: visible; }
@@ -121,18 +121,24 @@ header {
 	position: relative;
 	margin: 50px 0 0;
 }
+header h1 {
+	position: absolute;
+	top: 200px;
+	z-index: 10;
+	width: 800px;
+}
 header h1 a {
 	display: block;
-	font: bold italic 42px/40px 'Economica', 'LeagueGothicRegular', sans-serif;
+	font: bold 55px/40px 'Economica', 'LeagueGothicRegular', sans-serif;
 /*	text-transform: uppercase;*/
 	letter-spacing: 2px;
 	color: #000;
 }
-header span {
+/*header span {
 	display: block;
 	margin-left: 14px;
 }
-
+*/
 header small {
 	color: #ccc;
 	text-transform: uppercase;
@@ -312,9 +318,9 @@ nav[role=navigation] {
 .bio {
 	color: #222;
 	width: 520px;
-	margin: 150px 0 0 10px;
+	margin: 250px 0 0 10px;
 	border-width: 0 0 1px;
-	font: 400 18px/1.5 Archer, Georgia, "Times New Roman", serif;
+	font: 300 16px/1.5 Archer, Georgia, "Times New Roman", serif;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
@@ -322,7 +328,8 @@ nav[role=navigation] {
 	margin: 0 0 1.5em;
 }
 .bio p:first-child {
-	font-size: 24px;
+	font-size: 20px;
+	font-weight: 500;
 }
 .bio .more {
 	display: none;

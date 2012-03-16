@@ -12,6 +12,9 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>" />
 	<link href='http://fonts.googleapis.com/css?family=Economica:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	
+	<script type="text/javascript" src="http://use.typekit.com/ilf3snf.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
 	<script src="<?php bloginfo('template_directory') ?>/js/modernizr-1.7.min.js"></script>
 <?php //wp_head() // For plugins ?>
 </head>
