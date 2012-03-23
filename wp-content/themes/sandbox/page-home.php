@@ -11,9 +11,9 @@
 	$imgWidth = 800;
 	$imgHeight = 560;
 ?>
-<div id="content" class="home">
+<div id="content">
+	<h1><a href="<?php bloginfo('home') ?>/" rel="home"><?php //bloginfo('name') ?>Wojtek <span>Zajac</span></a></h1>
 	
-	<img src="/img/me.jpg" alt="Wojtek Zając" class="photo">
 	<section class="bio">
 		<p>Howdy. I am a 22 years old front-end engineer based in Kraków, Poland.
 			

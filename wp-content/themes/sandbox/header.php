@@ -19,16 +19,20 @@
 <?php //wp_head() // For plugins ?>
 </head>
 
-<body>
+<body<?php if(is_front_page()) { ?> class="home"<?php } ?>>
+
+<?php if(is_front_page()) { ?>
+<img src="/img/me.jpg" alt="Wojtek Zając" class="photo">
+<?php } ?>
 
 <div id="wrapper">
 
+<?php if (!is_page('home')) { ?>
 	<header>
 		<h1><a href="<?php bloginfo('home') ?>/" rel="home"><?php //bloginfo('name') ?>Wojtek <span>Zajac</span></a></h1>
 		<small>voi·tek za·yats</small>
 	</header>
 
-<?php if (!is_page('home')) { ?>
 	<nav role="navigation">
 		<ul id="menu">
 		<?php wp_list_pages('title_li=&sort_column=menu_order&exclude=4'); ?>
